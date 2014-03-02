@@ -58,7 +58,7 @@ class AdAdmin extends Admin {
         $queryBuilder = $em
             ->createQueryBuilder('a')
             ->select('a')
-            ->from('AntBundle:Ad', 'a')
+            ->from('AntWebBundle:Ad', 'a')
             ->where('a.adGroup = :id')
             ->setParameter('id', $id);
 
@@ -71,7 +71,7 @@ class AdAdmin extends Admin {
         $queryBuilder = $em
             ->createQueryBuilder('a')
             ->select('a')
-            ->from('AntBundle:AdGroup', 'a')
+            ->from('AntWebBundle:AdGroup', 'a')
             ->where('a.id = :id')
             ->setParameter('id', $id);
 
@@ -94,7 +94,7 @@ class AdAdmin extends Admin {
             ->addIdentifier('id',null, array(
                 'label'=>'ad.id'))
             ->add('adGroup.title',null,array('label'=>'ad.group'))
-            ->add('text', null, array('template' => 'AntBundle::list_custom.html.twig'))
+            ->add('text', null, array('template' => 'AntWebBundle::list_custom.html.twig'))
             ->add('url',null, array(
                 'label'=>'ad.url'))
             ->add('_action', 'actions', array(

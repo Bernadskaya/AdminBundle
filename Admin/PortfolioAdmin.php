@@ -16,7 +16,7 @@ class PortfolioAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
 //        $this->setFormTheme(array(
-//            'AntBundle:Form:form_admin_fields.html.twig',
+//            'AntWebBundle:Form:form_admin_fields.html.twig',
 //        ));
 
         $formMapper

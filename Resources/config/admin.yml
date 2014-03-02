@@ -9,7 +9,7 @@ services:
             - Ant\WebBundle\Entity\Ad
             - ~
         calls:
-            - [ setTranslationDomain, [AntBundle]]
+            - [ setTranslationDomain, [AntWebBundle]]
     sonata.admin.adGroup:
         class: Ant\AdminBundle\Admin\AdGroupAdmin
         tags:
@@ -19,7 +19,7 @@ services:
             - Ant\WebBundle\Entity\AdGroup
             - ~
         calls:
-            - [ setTranslationDomain, [AntBundle]]
+            - [ setTranslationDomain, [AntWebBundle]]
 
     ant.admin.news:
         class: Ant\AdminBundle\Admin\NewsAdmin
@@ -27,7 +27,7 @@ services:
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin,  label: "news.all"}
         calls:
-            - [ setTranslationDomain, [AntBundle]]
+            - [ setTranslationDomain, [AntWebBundle]]
 
     ant.admin.order_form:
         class: Ant\AdminBundle\Admin\OrderFormAdmin
@@ -38,7 +38,7 @@ services:
         tags:
             - {name: sonata.admin, manager_type: orm, group: "Content", label: "orders.all"}
         calls:
-            - [ setTranslationDomain, [AntBundle]]
+            - [ setTranslationDomain, [AntWebBundle]]
 
     ant.admin.page:
         class: Ant\AdminBundle\Admin\PageAdmin
@@ -49,7 +49,7 @@ services:
         tags:
             - {name: sonata.admin, manager_type: orm, group: "Pages", label: "pages.all"}
         calls:
-            - [ setTranslationDomain, [AntBundle]]
+            - [ setTranslationDomain, [AntWebBundle]]
 
 
     ant.admin.first_ad:
@@ -58,7 +58,7 @@ services:
         tags:
             - {name: sonata.admin, manager_type: orm, group: "ads.blocks", label: "ad.first"}
         calls:
-            - [ setTranslationDomain, [AntBundle]]
+            - [ setTranslationDomain, [AntWebBundle]]
 
     ant.admin.second_ad:
         class: Ant\AdminBundle\Admin\SecondAdAdmin
@@ -66,7 +66,7 @@ services:
         tags:
             - {name: sonata.admin, manager_type: orm, group: "ads.blocks", label: "ad.second"}
         calls:
-            - [ setTranslationDomain, [AntBundle]]
+            - [ setTranslationDomain, [AntWebBundle]]
 
     ant.admin.third_ad:
         class: Ant\AdminBundle\Admin\ThirdAdAdmin
@@ -74,7 +74,7 @@ services:
         tags:
             - {name: sonata.admin, manager_type: orm,  group: ads.blocks, label: "ad.third"}
         calls:
-            - [ setTranslationDomain, [AntBundle]]
+            - [ setTranslationDomain, [AntWebBundle]]
 
     ant.admin.fourth_ad:
         class: Ant\AdminBundle\Admin\FourthAdAdmin
@@ -82,7 +82,7 @@ services:
         tags:
             - {name: sonata.admin, manager_type: orm,  group: "ads.blocks", label: "ad.fourth"}
         calls:
-            - [ setTranslationDomain, [AntBundle]]
+            - [ setTranslationDomain, [AntWebBundle]]
 
     ant.admin.fifth_ad:
         class: Ant\AdminBundle\Admin\FifthAdAdmin
@@ -90,7 +90,7 @@ services:
         tags:
             - {name: sonata.admin, manager_type: orm,  group: "ads.blocks", label: "ad.fifth"}
         calls:
-            - [ setTranslationDomain, [AntBundle]]
+            - [ setTranslationDomain, [AntWebBundle]]
     ant.admin.portfolio:
         class: Ant\AdminBundle\Admin\PortfolioAdmin
         arguments:
@@ -100,4 +100,4 @@ services:
         tags:
             - {name: sonata.admin, manager_type: orm, group: "Portfolio", label: "portfolio.all"}
         calls:
-            - [ setTranslationDomain, [AntBundle]]
+            - [ setTranslationDomain, [AntWebBundle]]

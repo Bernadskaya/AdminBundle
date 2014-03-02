@@ -76,7 +76,7 @@ class PortfolioItemAdmin extends Admin
             ->add('id')
             ->add('path', null, array(
                 'label'=>'pf_item.path',
-                'template'=>'AntBundle::list_thumb.html.twig'
+                'template'=>'AntWebBundle::list_thumb.html.twig'
             ))
             ->add('created',null, array(
                 'label'=>'pf_item.created',
