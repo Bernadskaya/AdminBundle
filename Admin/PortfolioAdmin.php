@@ -16,7 +16,7 @@ class PortfolioAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
 //        $this->setFormTheme(array(
-//            'AntWebBundle:Form:form_admin_fields.html.twig',
+//            'AntBundle:Form:form_admin_fields.html.twig',
 //        ));
 
         $formMapper
@@ -40,7 +40,11 @@ class PortfolioAdmin extends Admin
 //                'label' => 'portfolio.position',
 //                'attr'  => array('class' => 'form-control')
 //            ))
-            ->add('gallery', 'sonata_type_admin');
+            ->add('gallery', 'sonata_type_admin',
+                array(),
+                array('admin_code' => 'sonata.media.admin.gallery'));
+
+
 
 //            ->add('images', 'sonata_type_collection', array(
 //                'label'    => 'portfolio.images',
