@@ -36,7 +36,7 @@
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-0": { "Ant\\AdminBundle": "" }
+        "psr-4": { "Ant\\AdminBundle\\": "" }
     },
     "minimum-stability": "dev",
     "extra": {
