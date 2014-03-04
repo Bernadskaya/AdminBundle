@@ -36,8 +36,9 @@
         "bin-dir": "bin"
     },
     "autoload": {
-        "psr-4": { "Ant\\AdminBundle\\": "" }
+        "psr-0": { "Ant\\AdminBundle": "" }
     },
+    "target-dir": "Ant/AdminBundle",
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
