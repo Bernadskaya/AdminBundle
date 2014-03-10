@@ -1,8 +1,5 @@
 {% extends sonata_block.templates.block_base %}
-
 {% block block %}
-
-
     {% for group in groups %}
         {% set display = (group.roles is empty or is_granted('ROLE_SUPER_ADMIN') ) %}
         {% for role in group.roles if not display %}
@@ -12,15 +9,12 @@
         {% if display %}
             <div class="row">
                 <h2>{{ group.label|trans({}, group.label_catalogue) }}</h2>
-
                 {% for admin in group.items %}
                     {% if admin.hasroute('create') and admin.isGranted('CREATE') or admin.hasroute('list') and admin.isGranted('LIST') %}
-
-                        <div class="col-sm-2">
+                        <div class="col-sm-4">
                             <div class="thumbnail">
                                 <div class="caption">
                                     <h3> {{ admin.label|trans({}, admin.translationdomain) }}</h3>
-
                                     <div class=btn-group">
                                         {% if admin.hasroute('create') and admin.isGranted('CREATE') %}
                                             {% if admin.subClasses is empty %}

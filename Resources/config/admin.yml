@@ -1,5 +1,17 @@
+parameters:
+    sonata.media.admin.gallery.class: Ant\AdminBundle\Admin\GalleryAdmin
 services:
-
+    ant.admin.gallery:
+        class: %sonata.media.admin.gallery.class%
+        arguments:
+            - ~
+            - Ant\MediaBundle\Entity\Gallery
+            - AntAdminBundle:MediaAdmin
+            - @sonata.media.pool
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: "Content", label: "portfolio.all"}
+        calls:
+            - [ setTranslationDomain, [AntWebBundle]]
     sonata.admin.ads:
         class: Ant\AdminBundle\Admin\AdAdmin
         tags:
@@ -25,7 +37,7 @@ services:
         class: Ant\AdminBundle\Admin\NewsAdmin
         arguments: [~, Ant\WebBundle\Entity\News, SonataAdminBundle:CRUD]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: admin,  label: "news.all"}
+            - {name: sonata.admin, manager_type: orm, group: "Content",  label: "news.all"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]
 
@@ -47,7 +59,7 @@ services:
             - Ant\WebBundle\Entity\Page
             - ~
         tags:
-            - {name: sonata.admin, manager_type: orm, group: "Pages", label: "pages.all"}
+            - {name: sonata.admin, manager_type: orm, group: "Content", label: "pages.all"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]
 
@@ -72,7 +84,7 @@ services:
         class: Ant\AdminBundle\Admin\ThirdAdAdmin
         arguments: [~, Ant\WebBundle\Entity\Ad, SonataAdminBundle:CRUD]
         tags:
-            - {name: sonata.admin, manager_type: orm,  group: ads.blocks, label: "ad.third"}
+            - {name: sonata.admin, manager_type: orm,  group: "ads.blocks", label: "ad.third"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]
 
@@ -89,15 +101,5 @@ services:
         arguments: [~, Ant\WebBundle\Entity\Ad, SonataAdminBundle:CRUD]
         tags:
             - {name: sonata.admin, manager_type: orm,  group: "ads.blocks", label: "ad.fifth"}
-        calls:
-            - [ setTranslationDomain, [AntWebBundle]]
-    ant.admin.portfolio:
-        class: Ant\AdminBundle\Admin\PortfolioAdmin
-        arguments:
-            - ~
-            - Ant\WebBundle\Entity\Portfolio
-            - ~
-        tags:
-            - {name: sonata.admin, manager_type: orm, group: "Portfolio", label: "portfolio.all"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]
