@@ -33,11 +33,11 @@ class AdAdmin extends Admin {
                     'tinymce'=>'{"theme":"simple"}',
                 )))
             ->add('adGroup', 'sonata_type_model', $adGroupFieldOptions)
-//            ->add('position','text', array (
-//                'required' => false,
-//                'attr' => array('class'=>'form-control'),
-//                'label'=>'ad.position'
-//            ))
+            ->add('position','text', array (
+                'required' => false,
+                'attr' => array('class'=>'form-control'),
+                'label'=>'ad.position'
+            ))
             ->add('url','text', array (
                 'required' => false,
                 'attr' => array('class'=>'form-control'),
