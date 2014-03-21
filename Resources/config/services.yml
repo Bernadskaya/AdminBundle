@@ -10,3 +10,7 @@ services:
 #        arguments: ["sonata.admin.block.portfolio", @templating, @sonata.admin.pool]
 #        tags:
 #            - { name: sonata.block}
+    form.type.tinymce:
+        class: Ant\AdminBundle\Form\TinymceType
+        tags:
+            - { name: form.type, alias: tinymce }
