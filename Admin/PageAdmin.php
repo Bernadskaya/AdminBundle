@@ -26,10 +26,9 @@ class PageAdmin extends Admin
 
                 'attr' => array('class'=>'form-control')
             ))
-            ->add('text', 'text', array(
+            ->add('text','tinymce', array(
+                'required' => false,
                 'label'=>'pages.text',
-
-                'attr' => array('class'=>'form-control')
             ))
             ->add('metaKey','text', array(
                 'label'=>'pages.metaKey',

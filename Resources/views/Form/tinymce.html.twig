@@ -1,0 +1,31 @@
+{% block tinymce_widget %}
+    {% spaceless %}
+        <script src="{{ asset('bundles/antadmin/js/tinymce.min.js') }}"></script>
+        <script src="{{ asset('bundles/antadmin/js/jquery.tinymce.min.js') }}"></script>
+        <script src="{{ asset('bundles/antadmin/js/ru.js') }}"></script>
+        {#<script src="{{ asset('bundles/antadmin/js/tinyinit.js') }}"></script>#}
+
+        <script type="text/javascript">
+            $( document ).ready(function() {
+                $('textarea#{{ form.vars.id }}').tinymce({
+                    plugins: "code fullscreen save preview textcolor",
+                    toolbar: "undo redo |  code | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify styleselect | formatselect fontselect fontsizeselect cut copy paste bullist numlist outdent indent blockquote | removeformat",
+                    extended_valid_elements:  "i[class=myclass]",
+                    menubar : false,
+                    height: 300,
+                    width: 700
+
+                });
+            });
+        </script>
+        {{ form_widget(form) }}
+    {% endspaceless %}
+{% endblock %}
+
+
+
+
+
+
+
+

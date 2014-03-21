@@ -25,13 +25,10 @@ class AdAdmin extends Admin {
             'attr' => array('class'=>'form-control')
         );
         $formMapper
-            ->add('text','textarea', array(
+            ->add('text','tinymce', array(
                 'required' => false,
                 'label'=>'ad.text',
-                'attr' => array(
-                    'class' => 'form-control tinymce',
-                    'tinymce'=>'{"theme":"simple"}',
-                )))
+                ))
             ->add('adGroup', 'sonata_type_model', $adGroupFieldOptions)
             ->add('position','text', array (
                 'required' => false,

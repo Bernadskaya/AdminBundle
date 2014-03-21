@@ -32,13 +32,10 @@ class NewsAdmin extends Admin
                 'attr' => array('class'=>'form-control')
 
             ))
-            ->add('text','textarea', array(
+            ->add('text','tinymce', array(
                 'required' => false,
                 'label'=>'news.text',
-                'attr' => array(
-                    'class' => 'tinymce form-control',
-                    'tinymce'=>'{"theme":"simple"}',
-                )))
+            ))
             ->add('metaKey','text', array(
                 'label'=>'news.metaKey',
                 'attr' => array('class'=>'form-control')
