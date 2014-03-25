@@ -25,6 +25,10 @@ class AdAdmin extends Admin {
             'attr' => array('class'=>'form-control')
         );
         $formMapper
+            ->add('title','text', array(
+                'required' => false,
+                'label'=>'ad.title',
+                ))
             ->add('text','tinymce', array(
                 'required' => false,
                 'label'=>'ad.text',
@@ -91,6 +95,7 @@ class AdAdmin extends Admin {
             ->addIdentifier('id',null, array(
                 'label'=>'ad.id'))
             ->add('adGroup.title',null,array('label'=>'ad.group'))
+            ->add('title', null, array())
             ->add('text', null, array('template' => 'AntWebBundle::list_custom.html.twig'))
             ->add('url',null, array(
                 'label'=>'ad.url'))
