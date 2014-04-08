@@ -1,21 +1,10 @@
 parameters:
     sonata.media.admin.gallery.class: Ant\AdminBundle\Admin\GalleryAdmin
 services:
-    ant.admin.gallery:
-        class: %sonata.media.admin.gallery.class%
-        arguments:
-            - ~
-            - Ant\MediaBundle\Entity\Gallery
-            - AntAdminBundle:MediaAdmin
-            - @sonata.media.pool
-        tags:
-            - {name: sonata.admin, manager_type: orm, group: "Content", label: "portfolio.all"}
-        calls:
-            - [ setTranslationDomain, [AntWebBundle]]
     sonata.admin.ads:
         class: Ant\AdminBundle\Admin\AdAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Content", label: "ad.all" }
+            - { name: sonata.admin, manager_type: orm, group: "content", label: "ad.all", label_catalogue: "AntWebBundle" }
         arguments:
             - ~
             - Ant\WebBundle\Entity\Ad
@@ -25,7 +14,7 @@ services:
     sonata.admin.adGroup:
         class: Ant\AdminBundle\Admin\AdGroupAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: "Content", label: "adGroup.all" }
+            - { name: sonata.admin, manager_type: orm, group: "content", label: "adGroup.all", label_catalogue: "AntWebBundle" }
         arguments:
             - ~
             - Ant\WebBundle\Entity\AdGroup
@@ -37,7 +26,7 @@ services:
         class: Ant\AdminBundle\Admin\NewsAdmin
         arguments: [~, Ant\WebBundle\Entity\News, SonataAdminBundle:CRUD]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: "Content",  label: "news.all"}
+            - {name: sonata.admin, manager_type: orm, group: "content",  label: "news.all", label_catalogue: "AntWebBundle"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]
 
@@ -48,7 +37,7 @@ services:
             - Ant\WebBundle\Entity\OrderForm
             - ~
         tags:
-            - {name: sonata.admin, manager_type: orm, group: "Content", label: "orders.all"}
+            - {name: sonata.admin, manager_type: orm, group: "content", label: "orders.all", label_catalogue: "AntWebBundle"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]
 
@@ -59,7 +48,7 @@ services:
             - Ant\WebBundle\Entity\Page
             - ~
         tags:
-            - {name: sonata.admin, manager_type: orm, group: "Content", label: "pages.all"}
+            - {name: sonata.admin, manager_type: orm, group: "content", label: "pages.all", label_catalogue: "AntWebBundle"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]
 
@@ -68,7 +57,7 @@ services:
         class: Ant\AdminBundle\Admin\FirstAdAdmin
         arguments: [~, Ant\WebBundle\Entity\Ad, SonataAdminBundle:CRUD]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: "ads.blocks", label: "ad.first"}
+            - {name: sonata.admin, manager_type: orm, group: "ads.blocks", label: "ad.first", label_catalogue: "AntWebBundle"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]
 
@@ -76,7 +65,7 @@ services:
         class: Ant\AdminBundle\Admin\SecondAdAdmin
         arguments: [~, Ant\WebBundle\Entity\Ad, SonataAdminBundle:CRUD]
         tags:
-            - {name: sonata.admin, manager_type: orm, group: "ads.blocks", label: "ad.second"}
+            - {name: sonata.admin, manager_type: orm, group: "ads.blocks", label: "ad.second", label_catalogue: "AntWebBundle"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]
 
@@ -84,7 +73,7 @@ services:
         class: Ant\AdminBundle\Admin\ThirdAdAdmin
         arguments: [~, Ant\WebBundle\Entity\Ad, SonataAdminBundle:CRUD]
         tags:
-            - {name: sonata.admin, manager_type: orm,  group: "ads.blocks", label: "ad.third"}
+            - {name: sonata.admin, manager_type: orm,  group: "ads.blocks", label: "ad.third", label_catalogue: "AntWebBundle"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]
 
@@ -92,7 +81,7 @@ services:
         class: Ant\AdminBundle\Admin\FourthAdAdmin
         arguments: [~, Ant\WebBundle\Entity\Ad, SonataAdminBundle:CRUD]
         tags:
-            - {name: sonata.admin, manager_type: orm,  group: "ads.blocks", label: "ad.fourth"}
+            - {name: sonata.admin, manager_type: orm,  group: "ads.blocks", label: "ad.fourth", label_catalogue: "AntWebBundle"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]
 
@@ -100,6 +89,6 @@ services:
         class: Ant\AdminBundle\Admin\FifthAdAdmin
         arguments: [~, Ant\WebBundle\Entity\Ad, SonataAdminBundle:CRUD]
         tags:
-            - {name: sonata.admin, manager_type: orm,  group: "ads.blocks", label: "ad.fifth"}
+            - {name: sonata.admin, manager_type: orm,  group: "ads.blocks", label: "ad.fifth", label_catalogue: "AntWebBundle"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]
