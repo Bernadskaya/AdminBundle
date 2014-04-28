@@ -26,13 +26,17 @@ class AdAdmin extends Admin {
         );
         $formMapper
             ->add('title','text', array(
-                'required' => false,
+                'required' => true,
                 'label'=>'ad.title',
-                ))
+            ))
             ->add('text','tinymce', array(
                 'required' => false,
                 'label'=>'ad.text',
-                ))
+            ))
+            ->add('icon', 'text', array(
+                'required' => false,
+                'label'=>'ad.icon',
+            ))
             ->add('adGroup', 'sonata_type_model', $adGroupFieldOptions)
             ->add('position','text', array (
                 'required' => false,
