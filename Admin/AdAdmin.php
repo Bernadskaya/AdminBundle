@@ -43,6 +43,7 @@ class AdAdmin extends Admin {
                 'attr' => array('class'=>'form-control'),
                 'label'=>'ad.position'
             ))
+
             ->add('url','text', array (
                 'required' => false,
                 'attr' => array('class'=>'form-control'),
@@ -52,6 +53,9 @@ class AdAdmin extends Admin {
                 'provider' => 'sonata.media.provider.image',
                 'context'  => 'default',
                 'required' => false))
+            ->add('active', null, array('required' => false,
+                'label'=>'ad.active'
+            ))
 
 
         ;
@@ -99,9 +103,9 @@ class AdAdmin extends Admin {
             ->addIdentifier('id',null, array(
                 'label'=>'ad.id'))
             ->add('adGroup.title',null,array('label'=>'ad.group'))
-            ->add('title', null, array())
-            ->add('text', null, array('template' => 'AntWebBundle::list_custom.html.twig'))
-            ->add('url',null, array(
+            ->add('title', null, array('label'=>'ad.title'))
+            ->add('active', 'boolean', array('label'=>'ad.active'))
+            ->add('url','url', array(
                 'label'=>'ad.url'))
             ->add('_action', 'actions', array(
                 'actions' => array(
