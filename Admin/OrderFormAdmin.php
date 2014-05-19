@@ -37,6 +37,14 @@ class OrderFormAdmin extends Admin
                 'label'=>'orders.phone',
                 'attr' => array('class'=>'form-control')
             ))
+            ->add('text','text', array(
+                'label'=>'orders.text',
+                'attr' => array('class'=>'form-control')
+            ))
+            ->add('agreement','checkbox', array(
+                'label'=>'orders.agreement',
+                'attr' => array('class'=>'form-control')
+            ))
         ;
     }
 
