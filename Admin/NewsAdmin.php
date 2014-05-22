@@ -38,10 +38,12 @@ class NewsAdmin extends Admin
             ))
             ->add('metaKey','text', array(
                 'label'=>'news.metaKey',
+                'required' => false,
                 'attr' => array('class'=>'form-control')
             ))
             ->add('metaDesc','textarea', array(
                 'label'=>'news.metaDesc',
+                'required' => false,
                 'attr' => array('class'=>'form-control')
             ))
             ->add('media', 'sonata_media_type', array(

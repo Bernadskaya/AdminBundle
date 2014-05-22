@@ -26,7 +26,7 @@ class AdAdmin extends Admin {
         );
         $formMapper
             ->add('title','text', array(
-                'required' => true,
+                'required' => false,
                 'label'=>'ad.title',
             ))
             ->add('text','tinymce', array(
