@@ -30,6 +30,8 @@ file that was distributed with this source code.
         <link rel="stylesheet" href="{{ asset('bundles/sonatajquery/themes/flick/jquery-ui-1.8.16.custom.css') }}" media="all">
 
         <link rel="stylesheet" href="{{ asset('bundles/sonataadmin/bootstrap/css/bootstrap.min.css') }}" media="all">
+        {#<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">#}
+
         <link rel="stylesheet" href="{{ asset('bundles/antweb/css/bootstrap.min.css') }}" media="all">
         <link rel="stylesheet" href="{{ asset('bundles/sonataadmin/bootstrap/css/bootstrap-responsive.min.css') }}" media="all">
 
@@ -117,8 +119,7 @@ file that was distributed with this source code.
                 {% if admin_pool is defined %}
                     {% block logo %}
                         <a href="{{ url('sonata_admin_dashboard') }}" class="brand">
-                            <img src="{{ asset(admin_pool.titlelogo) }}"  alt="{{ admin_pool.title }}">
-                            {{ admin_pool.title }}
+                            MuraveyAdmin
                         </a>
                     {% endblock %}
 
