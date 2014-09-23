@@ -32,12 +32,19 @@ class PageAdmin extends Admin
             ))
             ->add('metaKey','text', array(
                 'label'=>'pages.metaKey',
+                'required'=>false,
 
                 'attr' => array('class'=>'form-control')
             ))
-            ->add('metaDesc','text', array(
+            ->add('metaDesc','textarea', array(
                 'label'=>'pages.metaDesc',
+                'required'=>false,
 
+                'attr' => array('class'=>'form-control')
+            ))
+            ->add('metaTitle','text', array(
+                'label'=>'pages.metaTitle',
+                'required'=>false,
                 'attr' => array('class'=>'form-control')
             ))
         ;
@@ -91,7 +98,7 @@ class PageAdmin extends Admin
             ->add('id',null, array(
                 'label'=>'pages.id'
             ))
-            ->add('title',null, array(
+            ->addIdentifier('title',null, array(
                 'label'=>'pages.title'
             ))
             ->add('_action', 'actions', array(

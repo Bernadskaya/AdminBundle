@@ -62,7 +62,9 @@ class GalleryAdmin extends Admin
             ->add('enabled', null, array('required' => false))
             ->add('name')
             ->add('description',null, array('required' => false))
-            ->add('link', null, array('required' => false))
+            ->add('link', null, array('required' => false, 'label' => 'gallery.link'))
+            ->add('categories', 'sonata_type_model', array('expanded' => true, 'multiple' => true, 'label' => 'gallery.category'))
+
             ->add('defaultFormat', 'choice', array('choices' => $formats))
             ->add('galleryHasMedias', 'sonata_type_collection', array(
                     'cascade_validation' => true,

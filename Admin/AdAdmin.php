@@ -100,10 +100,10 @@ class AdAdmin extends Admin {
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('id',null, array(
-                'label'=>'ad.id'))
+            ->add('id', null, array('label'=>'ad.id'))
+            ->addIdentifier('title',null, array(
+                'label'=>'ad.title'))
             ->add('adGroup.title',null,array('label'=>'ad.group'))
-            ->add('title', null, array('label'=>'ad.title'))
             ->add('position', null, array('label'=>'ad.position'))
             ->add('active', 'boolean', array('label'=>'ad.active'))
             ->add('url','url', array(

@@ -78,7 +78,7 @@ class OrderFormAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('id',null, array(
+            ->addIdentifier('id',null, array(
                 'label'=>'orders.id'
             ))
             ->add('created','date', array(

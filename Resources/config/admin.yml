@@ -76,7 +76,6 @@ services:
             - {name: sonata.admin, manager_type: orm,  group: "ads.blocks", label: "ad.third", label_catalogue: "AntWebBundle"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]
-
     ant.admin.fourth_ad:
         class: Ant\AdminBundle\Admin\FourthAdAdmin
         arguments: [~, Ant\WebBundle\Entity\Ad, SonataAdminBundle:CRUD]
@@ -90,5 +89,12 @@ services:
         arguments: [~, Ant\WebBundle\Entity\Ad, SonataAdminBundle:CRUD]
         tags:
             - {name: sonata.admin, manager_type: orm,  group: "ads.blocks", label: "ad.fifth", label_catalogue: "AntWebBundle"}
+        calls:
+            - [ setTranslationDomain, [AntWebBundle]]
+    ant_web.admin.category:
+        class: Ant\AdminBundle\Admin\CategoryAdmin
+        arguments: [~, Ant\WebBundle\Entity\Category, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: "sonata_media", label: "gallery.category", label_catalogue: "AntWebBundle"}
         calls:
             - [ setTranslationDomain, [AntWebBundle]]

@@ -121,7 +121,7 @@ class NewsAdmin extends Admin
             ->add('id', null, array(
         'label'=>'news.id',
     ))
-            ->add('title', null, array(
+            ->addIdentifier('title', null, array(
                 'label'=>'news.title',
             ))
             ->add('created',null, array(
