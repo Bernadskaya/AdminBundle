@@ -28,9 +28,8 @@ class CategoryAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('name')
             ->add('id')
-            ->add('galleries')
+            ->addIdentifier('name')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
