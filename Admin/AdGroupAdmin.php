@@ -27,7 +27,7 @@ class AdGroupAdmin extends Admin {
                 'label'=>'adGroup.title',
                 'attr' => array('class'=>'form-control')
             ))
-            ->add('active', null, array('required' => false,
+            ->add('enabled', null, array('required' => false,
                 'label'=>'ad.active'
             ))
         ;
@@ -41,16 +41,12 @@ class AdGroupAdmin extends Admin {
             ->add('id',null, array(
                 'label'=>'adGroup.title',
                 'attr' => array('class'=>'form-control')
-
-
             ))
             ->add('title',null, array(
                 'label'=>'adGroup.title',
                 'attr' => array('class'=>'form-control')
 
             ))
-
-
         ;
     }
 
@@ -58,13 +54,13 @@ class AdGroupAdmin extends Admin {
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('id',null, array(
+            ->add('id',null, array(
                 'label'=>'adGroup.id'
             ))
-            ->add('title',null, array(
+            ->addIdentifier('title',null, array(
                 'label'=>'adGroup.title'
             ))
-            ->add('active', 'boolean', array('label'=>'ad.active'))
+            ->add('enabled', 'boolean', array('editable' => true,'label'=>'ad.active'))
 
         ;
     }

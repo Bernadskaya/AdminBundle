@@ -53,7 +53,8 @@ class AdAdmin extends Admin {
                 'provider' => 'sonata.media.provider.image',
                 'context'  => 'default',
                 'required' => false))
-            ->add('active', null, array('required' => false,
+            ->add('active', null, array(
+                'required' => false,
                 'label'=>'ad.active'
             ))
 
@@ -105,7 +106,7 @@ class AdAdmin extends Admin {
                 'label'=>'ad.title'))
             ->add('adGroup.title',null,array('label'=>'ad.group'))
             ->add('position', null, array('label'=>'ad.position'))
-            ->add('active', 'boolean', array('label'=>'ad.active'))
+            ->add('active', 'boolean', array('editable' => true, 'label'=>'ad.active'))
             ->add('url','url', array(
                 'label'=>'ad.url'))
             ->add('_action', 'actions', array(
