@@ -29,7 +29,8 @@ class CategoryAdmin extends Admin
     {
         $listMapper
             ->add('id')
-            ->addIdentifier('name')
+            ->addIdentifier('title')
+            ->add('name')
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -47,6 +48,7 @@ class CategoryAdmin extends Admin
     {
         $formMapper
             ->add('name')
+            ->add('title')
         ;
     }
 
